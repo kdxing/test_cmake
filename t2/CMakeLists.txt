@@ -1,0 +1,13 @@
+PROJECT(T2)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+# method 1
+#ADD_EXECUTABLE(EXE main.cpp poly.cpp)
+
+# method 2
+#SET(SRCS main.cpp poly.cpp)
+#ADD_EXECUTABLE(EXE ${SRCS})
+
+# method 3
+AUX_SOURCE_DIRECTORY(. SRCS)
+ADD_EXECUTABLE(EXE ${SRCS})
